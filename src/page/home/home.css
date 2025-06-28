@@ -1,0 +1,170 @@
+.fb-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 8px 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.fb-header-left {
+    display: flex;
+    align-items: center;
+}
+.fb-header-left-media {
+    display: none;
+}
+
+
+#fb-logo {
+    color: #1877f2;
+    margin-right: 10px;
+    font-size: 35px;
+}
+.fb-logo-text {
+    color: #1877f2;
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+.fb-search {
+    display: flex;
+    align-items: center;
+    background-color: #f0f2f5;
+    border-radius: 999px;
+    padding: 5px 10px;
+    height: 40px;
+
+}
+
+.fb-search i {
+    color: gray;
+    margin-left: 10px;
+}
+
+.fb-search input {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+    font-size: 14px;
+    padding: 0;
+    padding: 10px;
+    margin: 0;
+}
+
+.fb-header-center {
+    display: flex;
+    gap: 30px;
+}
+.fb-header-center-media {
+    display: none;
+}
+
+.fb-header-icon {
+    padding: 8px 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    color: gray;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fb-header-icon:hover {
+    background-color: #f0f2f5;
+}
+
+.fb-header-icon.active {
+    color: #1877f2;
+    border-bottom: 3px solid #1877f2;
+    border-radius: 0;
+}
+.fb-circle-icon.active i{
+    color: #1877f2 ;
+}
+
+.fb-header-right {
+    display: flex;
+    gap: 10px;
+}
+
+.fb-circle-icon {
+    width: 36px;
+    height: 36px;
+    background-color: #f0f2f5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.fb-circle-icon:hover {
+    background-color: #e4e6eb;
+}
+
+.fb-circle-icon i {
+    font-size: 18px;
+    color: #050505;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+    .fb-search input {
+        display: none;
+        /* inputni yashirish */
+    }
+
+    .fb-search {
+        padding: 5px;
+    }
+
+    .fb-header{
+        display: none;
+    }
+    .fb-header-left-media {
+        display: block;
+        padding: 6px;
+        background: #ffff;
+    }
+    .fb-header-center-media {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        padding: 5px;
+        position: fixed;
+        bottom: 0;
+        background: #fff;
+        z-index: 1000;
+      }
+      
+    
+    .fb-header-icon {
+        font-size: 18px;
+        padding: 6px 8px;
+    }
+
+    .fb-header-right {
+        gap: 6px;
+    }
+
+    .fb-circle-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .fb-circle-icon i {
+        font-size: 16px;
+    }
+
+    .fb-logo {
+        width: 35px;
+        height: 35px;
+    }
+}

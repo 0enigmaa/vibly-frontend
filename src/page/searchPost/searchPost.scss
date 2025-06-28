@@ -1,0 +1,186 @@
+:root {
+  --primary-color: #1877f2;
+  --secondary-color: #5f6368;
+  --background-color: #f5f6f8;
+  --hover-color: #e7f1ff;
+}
+
+.search-post-container {
+    max-width: 100%;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f0f2f5;
+}
+
+#search-input-box {
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.search-header {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 14px 18px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  outline: none;
+  margin-top: 1rem;
+  transition: border-color 0.3s;
+}
+
+.search-input:focus {
+  border-color: var(--primary-color);
+}
+
+.posts-container {
+  width: 100%;
+  max-width: 100%;
+  margin-top: 2rem;
+}
+
+.post-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.manga-cover {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+
+.username {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.location {
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+}
+
+.post-content {
+  margin-top: 1rem;
+}
+
+.actions {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.action-btn i {
+  margin-right: 5px;
+}
+
+.comment-box {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.comment-box input {
+  width: 85%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.comment-box button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.no-results {
+  color: var(--secondary-color);
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* ---------- RESPONSIVE DESIGN (MEDIA QUERIES) ---------- */
+
+/* Planshetlar uchun (768px va kichik) */
+@media (max-width: 768px) {
+  #search-input-box {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-header {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .search-input {
+    margin-top: 1rem;
+    max-width: 100%;
+  }
+
+  .post-card {
+    padding: 1rem;
+  }
+}
+
+/* Telefonlar uchun (480px va kichik) */
+@media (max-width: 480px) {
+  .search-header {
+    font-size: 1.8rem;
+  }
+
+  .search-input {
+    padding: 12px 16px;
+    font-size: 0.9rem;
+  }
+
+  .post-card {
+    padding: 0.8rem;
+  }
+
+  .username {
+    font-size: 1rem;
+  }
+
+  .post-content p {
+    font-size: 0.9rem;
+  }
+}

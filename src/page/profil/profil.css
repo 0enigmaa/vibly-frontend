@@ -1,0 +1,134 @@
+
+.tab-content{
+  background: #f0f2f5;
+  padding: 15px 0 20px;
+}
+.profil-lg-media{
+  background: #f0f2f5;
+}
+/* Profil kartasi */
+.profil-card {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  margin-bottom: 20px;
+}
+.profil-card:hover {
+  transform: translateY(-3px);
+}
+
+
+
+.profil-info {
+  padding: 10px;
+  text-align: center;
+}
+
+.profil-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.profil-description {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.profil-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn {
+  padding: 6px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  transition: background-color 0.2s;
+}
+
+.btn-update {
+  background-color: #4caf50;
+  color: white;
+}
+
+.btn-update:hover {
+  background-color: #45a049;
+}
+
+.btn-delete {
+  background-color: #f44336;
+  color: white;
+}
+
+.btn-delete:hover {
+  background-color: #e53935;
+}
+
+/* Post kartasi */
+.post-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin-bottom: 20px;
+  transition: transform 0.2s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-3px);
+}
+
+.post-info {
+  text-align: center;
+}
+
+.post-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.post-description {
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.post-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* Responsivlik */
+@media (max-width: 992px) {
+  .col-md-4 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 800px) {
+  .col-sm-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .profil-info,
+  .post-info {
+    padding: 8px;
+  }
+
+  .btn {
+    font-size: 11px;
+  }
+}

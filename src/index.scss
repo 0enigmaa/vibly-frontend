@@ -1,0 +1,21 @@
+a {
+    text-decoration: none;
+}
+
+section,
+body,
+html {
+    overflow: visible;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:where(.css-dev-only-do-not-override-1m63z2v).ant-image .ant-image-img {
+    height: 200px;
+}
+// [class*="col-"] {
+//   min-height: 200px !important;
+//   max-height: 500px !important;
+// }

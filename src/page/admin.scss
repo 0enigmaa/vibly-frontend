@@ -1,0 +1,55 @@
+.adminPage {
+  display: flex;
+  gap: 30px;
+  padding: 30px;
+}
+.adminPageItem {
+  min-width: 200px;
+  width: 50%;
+  height: 300px;
+  background: linear-gradient(135deg, #5e5efd, #0519ec, #5e5efd);
+  opacity: 0.8;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.8s ease;
+  border-radius: 20px;
+  &:hover {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+  p:hover {
+    text-decoration: underline;
+  }
+}
+
+
+.users {
+  background: rgba(192, 188, 188, 0.545);
+  line-height: 30px;
+}
+.top-users {
+  line-height: 30px;
+}
+.icon-admin {
+  margin-top: 40px;
+  font-size: 150px;
+  // position:absolute;
+  // top: 20px;
+  // left: 40%;
+}
+.text-admin {
+  display: block;
+}
+@media (max-width: 800px) {
+  .adminPage {
+    flex-direction: column;
+    align-items: center;
+  }
+  .adminPageUser {
+    width: 90%;
+  }
+  .adminPagePost {
+    width: 90%;
+  }
+}

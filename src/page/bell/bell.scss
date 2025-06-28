@@ -1,0 +1,82 @@
+.notifcations {
+  width: 100%;
+}
+.count {
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  font-size: 36px;
+  margin: 15px auto;
+}
+
+.count-i {
+  background: #74c0fc;
+  padding: 10px; /* 30px juda katta — aylana bo‘lmaydi */
+  border-radius: 50%; /* bu muhim! */
+  color: white;
+  display: inline-block; /* bu ham kerak bo‘lishi mumkin */
+  width: 40px;
+  height: 40px;
+  line-height: 20px;
+}
+
+.ntf-all {
+  padding: 0;
+  width: 80%;
+  margin: 50px auto;
+  list-style: none;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.ntf-item {
+  width: 90%;
+  display: flex;
+  padding: 30px;
+  border-radius: 10px;
+  justify-content: space-between;
+  background: rgba($color: #c6c5c5, $alpha: 0.1);
+  position: relative;
+}
+.ntf-btn {
+  display: flex;
+  gap: 20px;
+  align-items: baseline;
+}
+.ntf-text {
+  display: flex;
+  gap: 20px;
+}
+.font-normal {
+  background: rgba(172, 255, 47, 0.452);
+}
+.date {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  margin-top: 100px;
+}
+@media (max-width: 770px) {
+  .ntf-all {
+    width: 100%;
+  }
+
+  .ntf-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .read-btn,
+  .delete-btn {
+    width: 80px;
+  }
+  .isRead {
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+  }
+}

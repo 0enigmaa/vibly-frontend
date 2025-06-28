@@ -1,0 +1,52 @@
+.fb-sidebar {
+    width: 280px;
+    background-color: white;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 91.5vh;
+    overflow-y: auto;
+    border-right: 1px solid #ddd;
+    position: sticky;
+    top: 60px;
+  }
+  
+  .fb-sidebar-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    border-radius: 8px;
+    color: #050505;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+  }
+  .activee{
+    background: #1877f2;
+    color: white;
+    i{
+      color: white !important;
+    }
+  }
+  .fb-sidebar-item i {
+    margin-right: 12px;
+    font-size: 20px;
+    color: #65676b;
+  }
+  
+  .fb-sidebar-item:hover {
+    background-color: #f0f2f5;
+    color: #050505;
+    i{
+      color: #65676b !important;
+    }
+  }
+  
+  /* ========== RESPONSIVE ========== */
+  @media (max-width: 768px) {
+    .fb-sidebar {
+      display: none;
+    }
+  }
+  
