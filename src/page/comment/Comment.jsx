@@ -4,12 +4,13 @@ import { useInfoContext } from '../../context/context';
 import avatar from "../../puplickImg/men.png";
 import "./CommentAdmin.css";
 import { toast } from "react-toastify";
+import { useNavigate } from 'react-router-dom';
 
 const CommentAdmin = () => {
   const { allComment, setAllComment } = useInfoContext();
   const [editCommentId, setEditCommentId] = useState(null);
   const [editedContent, setEditedContent] = useState("");
-
+const navigate = useNavigate()
   const handleDelete = async (id) => {
     if (!window.confirm("Rostdan ham ushbu kommentni o'chirmoqchimisiz?")) return;
 
@@ -36,9 +37,25 @@ const CommentAdmin = () => {
       toast.error("Yangilashda xatolik: " + error.message);
     }
   };
-
+  const hendleNavigate = (e, path) => {
+    e.preventDefault();
+    navigate(path);
+  };
   return (
     <div className="admin-comments container mt-4">
+      <a
+        href="/"
+        className="d-flex align-items-center gap-2"
+        style={{
+          width: "100%",
+          display: "block",
+          textAlign: "left",
+        }}
+        onClick={(e) => hendleNavigate(e, "/")}
+      >
+        <i class="fa-solid fa-arrow-left"></i>
+        back
+      </a>
       <h2>Admin all comments</h2>
       {allComment.length === 0 ? (
         <p>Kommentlar yo'q</p>

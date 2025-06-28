@@ -18,10 +18,6 @@ const SearchPost = ({handleClick, handleOneUser}) => {
 
   return (
     <div className="search-post-container">
-      <a className="back_home" href="/"> 
-        <i className="fa-solid fa-arrow-left"></i> Back home
-      </a> 
-
       <div id="search-input-box" className="w-75 d-flex align-items-center justify-content-between">
         <h1 className="search-header"> Find Post</h1>
         <input

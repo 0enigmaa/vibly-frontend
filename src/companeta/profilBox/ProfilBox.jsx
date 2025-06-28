@@ -132,7 +132,7 @@ const ProfilBox = ({
               <label
                 htmlFor="post-upload"
                 style={{
-                  width: "100%",
+                  width: "80%",
                   height: "200px",
                   objectFit: "cover",
                   cursor: "pointer",

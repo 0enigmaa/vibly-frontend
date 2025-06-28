@@ -38,7 +38,10 @@ const Home = ({ showModal, handleSearchUserPage, handleOneUser }) => {
     e.preventDefault();
     navigate(pathname);
   };
-
+  const hendleNavigate = (e, path) => {
+    e.preventDefault();
+    navigate(path);
+  };
   return (
     <div>
       <div style={{ position: "sticky", top: "0", zIndex: "999" }}>
@@ -97,22 +100,40 @@ const Home = ({ showModal, handleSearchUserPage, handleOneUser }) => {
               </div>
             </section>
           )}
+
+
           {location.pathname === "/posts" && (
-            <div className="w-100 row" style={{ background: "#f0f2f5" }}>
-              {allPost?.map((post) => {
-                return (
-                  <div className="col-12 col-sm-12 col-md-4 col-lg-4">
-                    <Post
-                      key={post._id}
-                      handleClick={handleClick}
-                      post={post}
-                      handleOneUser={handleOneUser}
-                    />
-                  </div>
-                );
-              })}
+            <div className="p-3" style={{ background: "#f0f2f5" }}>
+              <a
+                href="/"
+                className="d-flex align-items-center gap-2"
+                style={{
+                  width: "100%",
+                  display: "block",
+                  textAlign: "left",
+                }}
+                onClick={(e) => hendleNavigate(e, "/")}
+              >
+                <i class="fa-solid fa-arrow-left"></i>
+                back
+              </a>
+              <div className="w-100 row" >
+                {allPost?.map((post) => {
+                  return (
+                    <div className="col-12 col-sm-12 col-md-12 col-lg-4">
+                      <Post
+                        key={post._id}
+                        handleClick={handleClick}
+                        post={post}
+                        handleOneUser={handleOneUser}
+                      />
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           )}
+
 
           {location.pathname === "/home" && (
             <section className="d-flex">
